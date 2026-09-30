@@ -1,0 +1,188 @@
+/* ---------------------------------------------------------------
+   Yike Chen — personal site
+   Layout and typography follow the AcademicPages / Minimal Mistakes
+   conventions: masthead, sticky author sidebar, dense content column.
+   --------------------------------------------------------------- */
+
+:root {
+  --text: #494e52;
+  --muted: #7a8288;
+  --link: #52adc8;
+  --rule: #f2f3f3;
+  --bg: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Roboto,
+               "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: underline; }
+a:hover { text-decoration: underline; }
+
+/* ---------- masthead ---------- */
+
+.masthead { border-bottom: 1px solid var(--rule); }
+
+.masthead__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 40px;
+}
+
+.masthead a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 45px;
+}
+.masthead a:hover { color: var(--text); }
+.site-title { font-weight: 700; margin-right: 50px; }
+
+/* ---------- frame ---------- */
+
+.main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  margin: 36px auto 0;
+  padding: 0 18px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar {
+  flex: 0 0 15.3%;
+  position: sticky;
+  top: 24px;
+  padding-top: 6px;
+}
+
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-left: 52px;
+  padding-bottom: 60px;
+}
+
+/* ---------- sidebar ---------- */
+
+.author-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.author-bio {
+  font-size: 13.5px;
+  margin: 10px 0 20px;
+  line-height: 1.4;
+}
+
+.author-links { list-style: none; margin: 0; padding: 0; }
+
+.author-links li {
+  font-size: 13.5px;
+  line-height: 20.25px;
+  margin-bottom: 6.75px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.author-links a { color: var(--text); text-decoration: none; }
+.author-links a:hover { color: var(--link); }
+
+.author-links svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-top: 3px;
+  fill: currentColor;
+  opacity: 0.75;
+}
+
+/* ---------- content ---------- */
+
+.content h1 {
+  font-size: 28.13px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.content h2 {
+  font-size: 22.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 32px 0 12px;
+}
+
+.content p { font-size: 18px; line-height: 27px; margin: 0 0 18px; }
+
+.content ul { font-size: 18px; line-height: 27px; margin: 18px 0; padding-left: 40px; }
+.content ul ul { list-style-type: circle; margin: 0; }
+.content li { margin-bottom: 9px; }
+.content li:last-child { margin-bottom: 0; }
+
+.content .self { text-decoration: underline; }
+.content .tag { color: var(--muted); }
+.content .sep { color: var(--muted); }
+
+/* ---------- footer ---------- */
+
+.footer {
+  flex: 0 0 auto;
+  background: var(--rule);
+  margin-top: 40px;
+  padding: 26px 0 30px;
+}
+
+.footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 18px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.footer__inner a { color: var(--muted); text-decoration: none; font-weight: 700; }
+.footer__inner a:hover { color: var(--text); }
+.footer p { margin: 0 0 8px; }
+.footer .copy { margin: 0; font-size: 12.5px; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1023px) {
+  .main { display: block; padding: 0 18px; margin-top: 24px; }
+  .sidebar { position: static; padding-top: 0; margin-bottom: 26px; }
+  .content { padding-left: 0; }
+  .author-bio { margin-bottom: 14px; }
+}
+
+@media (max-width: 600px) {
+  .masthead__inner { gap: 0 24px; padding: 12px 18px; }
+  .masthead a { font-size: 16px; line-height: 34px; }
+  .site-title { margin-right: 20px; }
+  .content h1 { font-size: 24px; }
+  .content h2 { font-size: 20px; }
+  .content p, .content ul { font-size: 16px; line-height: 25px; }
+  .content ul { padding-left: 26px; }
+}
