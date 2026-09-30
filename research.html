@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research - Yike Chen</title>
+<meta name="description" content="Research on LLM pricing agents, zero-shot strategic bidding, coupled electricity-carbon market simulation and LLM post-training.">
+<link rel="canonical" href="https://ccc917111.github.io/research.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research - Yike Chen">
+<meta property="og:description" content="Research on LLM pricing agents, zero-shot strategic bidding, coupled electricity-carbon market simulation and LLM post-training.">
+<meta property="og:url" content="https://ccc917111.github.io/research.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead__inner">
+    <a class="site-title" href="index.html">Yike Chen</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</div>
+
+<div class="main">
+
+  <aside class="sidebar">
+    <h3 class="author-name">Yike Chen</h3>
+    <p class="author-bio">B.S. @ CUHK-Shenzhen<br>Data Science and Big Data Technology</p>
+    <ul class="author-links">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Shenzhen, China</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/></svg><a href="mailto:yikechen@link.cuhk.edu.cn">Email</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><a href="https://github.com/CCC917111">GitHub</a></li>
+    </ul>
+  </aside>
+
+  <div class="content">
+    <h1>Research</h1>
+
+    <ul>
+      <li><strong>Strategic Adaptation of LLM Pricing Agents in Dynamic Markets</strong> <br>
+      2026 - present, independent research in progress <br>
+      Two language-model sellers compete in a repeated differentiated-products market while a
+      regulator watches for three observable price patterns and responds by recording the flag
+      silently, asking for one revision, or capping the executed price. A stationary baseline of
+      fifteen runs establishes how prices and private notes behave under fixed demand; the current
+      arm replaces it with a deterministic expansion-contraction cycle, so the same market size
+      recurs in rising and falling phases and a strategy formed under one condition can be followed
+      into another. Elevated prices are treated as an outcome measure rather than as evidence of
+      collusion. <br>
+      <a href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">Code</a></li>
+
+      <li><strong>Zero-Shot Strategic Bidding in Coupled Electricity-Carbon Markets</strong> <br>
+      02/2026 - 08/2026, first-author paper at IEEE PES APPEEC 2026 <br>
+      A generation company must bid profitably under both an electricity price and a carbon price,
+      which makes the physical cost calculation and the strategic markup two different problems. We
+      separated them into two reasoning layers around an open-weight model, with rule-based
+      verification between the layers, and supplied a sliding window of market feedback so that the
+      bidding context is refined from round to round with no fine-tuning and no parameter update. On
+      the IEEE 14-bus system the agent earned higher average profit than a fixed-markup baseline
+      while clearing in every round, and re-adjusted its bids under a sharp carbon-price shock. <br>
+      <a href="publications.html">Publication</a></li>
+
+      <li><strong>LLM-CECM: Agent-Based Simulation of Coupled Electricity-Carbon Markets</strong> <br>
+      07/2025 - 02/2026, research assistant, co-author in <em>Renewable Energy</em> <br>
+      A simulation framework in which generation companies are language-model agents bidding into
+      an electricity market coupled to a carbon market. I built the simulation pipeline - data
+      preprocessing, parallel agent rollout, market-state updates and visualisation - and ran the
+      study on the IEEE 118-bus system. Two components address the cost of such a simulation and the
+      quality of the decisions in it: an adaptive decision frequency that lets agents skip full
+      reasoning when the market state has not moved, cutting model calls and runtime by roughly 80%
+      against a matched full-frequency baseline, and counterfactual reasoning that lets an agent
+      evaluate bids it did not submit. In a congested-market experiment the framework roughly halved
+      a rolling price-volatility measure. <br>
+      <a href="https://doi.org/10.1016/j.renene.2026.126139">Paper</a></li>
+
+      <li><strong>Post-Training for Structured Multi-Label Extraction</strong> <br>
+      05/2025 - 07/2025, research assistant <br>
+      The task was to read free text and return industry and concept labels as valid JSON, where
+      both the label set and the format have to be right. I built the data pipeline for cleaning,
+      deduplication, class balancing and chat-format conversion, then fine-tuned Qwen3-8B with LoRA
+      in a supervised stage followed by a GRPO stage whose Jaccard-similarity reward also had to
+      parse and repair malformed JSON. Against supervised fine-tuning alone, label Jaccard
+      similarity rose from 27.6% to 60.6% and the share of parsable outputs from 97.5% to 100%.
+      Conducted on non-public data; no code release.</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer__inner">
+    <p><a href="https://github.com/CCC917111">GITHUB</a></p>
+    <p class="copy">&copy; 2026 Yike Chen.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects - Yike Chen</title>
+<meta name="description" content="Open-source research code: LLM pricing agents, long-tail driving scene discovery and CNN-Mamba forest type segmentation.">
+<link rel="canonical" href="https://ccc917111.github.io/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects - Yike Chen">
+<meta property="og:description" content="Open-source research code: LLM pricing agents, long-tail driving scene discovery and CNN-Mamba forest type segmentation.">
+<meta property="og:url" content="https://ccc917111.github.io/projects.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead__inner">
+    <a class="site-title" href="index.html">Yike Chen</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</div>
+
+<div class="main">
+
+  <aside class="sidebar">
+    <h3 class="author-name">Yike Chen</h3>
+    <p class="author-bio">B.S. @ CUHK-Shenzhen<br>Data Science and Big Data Technology</p>
+    <ul class="author-links">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Shenzhen, China</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/></svg><a href="mailto:yikechen@link.cuhk.edu.cn">Email</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><a href="https://github.com/CCC917111">GitHub</a></li>
+    </ul>
+  </aside>
+
+  <div class="content">
+    <h1>Projects</h1>
+
+    <ul>
+      <li><strong>LLM Pricing Agents in Dynamic Markets</strong> <br>
+      Research codebase for the pricing study: a calibrated logit market, structured model clients
+      with persistent private notes, a regulator implementing passive, revision and veto oversight,
+      and the round loop that ties them together. The repository publishes the full run records, the
+      provenance of every figure, and the ambiguities found in the protocol it replicates. <br>
+      <a href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">Code</a> |
+      <a href="research.html">Research</a></li>
+
+      <li><strong>Long-Tail Driving Scene Discovery</strong> <br>
+      Rare, safety-critical driving scenes are hard to find because they are not statistical
+      outliers - a wheelchair user at a crossing looks like an ordinary street scene. This project
+      searches the hidden states of a frozen vision-language model instead of the images: a sparse
+      autoencoder trained with a tail-guided objective splits the representation into a normal and a
+      long-tail subspace, and the units that fire give a readable reason for every flagged frame.
+      Several units correspond to nameable conditions and can be used as retrieval keys over
+      unlabelled data. <br>
+      <a href="https://github.com/CCC917111/long-tail-driving-scene-discovery">Code</a></li>
+
+      <li><strong>CNN-Mamba Forest Type Segmentation</strong> <br>
+      Pixel-level forest type mapping from Sentinel-2 time series, climate variables and elevation,
+      evaluated on the ForTy v1 benchmark. A Mamba-2 selective state-space block handles the temporal
+      axis, a structure-aware fusion layer mixes each patch with its neighbours in the bottleneck,
+      and a dynamic fusion module weights the three modalities per sample. Includes a command-line
+      tool that applies a trained checkpoint to new tiles. <br>
+      <a href="https://github.com/CCC917111/geospatial-mamba-deforestation">Code</a></li>
+    </ul>
+
+    <h2>Technical Background</h2>
+
+    <ul>
+      <li>Programming: Python, Java, MATLAB</li>
+      <li>Machine learning: PyTorch, TensorFlow, Hugging Face Transformers, LoRA, SFT, GRPO</li>
+      <li>Data and computing: NumPy, Pandas, Apache Spark</li>
+      <li>Tools: Git, Linux, Docker</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer__inner">
+    <p><a href="https://github.com/CCC917111">GITHUB</a></p>
+    <p class="copy">&copy; 2026 Yike Chen.</p>
+  </div>
+</div>
+
+</body>
+</html>
