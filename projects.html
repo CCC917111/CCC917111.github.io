@@ -41,7 +41,6 @@
 
     <ul>
       <li><strong>LLM Pricing Agents in Dynamic Markets</strong> <br>
-      2026 - present, independent research <br>
       Research codebase for the pricing study: a calibrated logit market, structured model clients
       with persistent private notes, a regulator implementing passive, revision and veto oversight,
       and the round loop that ties them together. The repository publishes the full run records, the
@@ -50,28 +49,21 @@
       <a href="research.html">Research</a></li>
 
       <li><strong>Long-Tail Driving Scene Discovery</strong> <br>
-      Spring 2026, capstone project with Zihua Chen and Yusong Zhao <br>
-      Rare, safety-critical driving scenes are hard to mine because they are often not visual
-      outliers: a wheelchair user at a crossing looks like an ordinary street scene. We mined such
-      scenes from the internal representations of a frozen vision-language model rather than from the
-      images. A sparse autoencoder trained with a tail-guided objective decomposes the model's hidden
-      state into a normal and a long-tail subspace; a frame is flagged when the long-tail subspace
-      activates, and the units that fire explain why. On nuScenes this raised long-tail F1 from 0.02
-      for the same model prompted directly to 0.85, and individual units turned out to correspond to
-      specific risk patterns such as rain, wheelchair users or pedestrians in construction zones, so
-      they can serve as search keys over unlabelled data. <br>
+      Rare, safety-critical driving scenes are hard to find because they are not statistical
+      outliers - a wheelchair user at a crossing looks like an ordinary street scene. This project
+      searches the hidden states of a frozen vision-language model instead of the images: a sparse
+      autoencoder trained with a tail-guided objective splits the representation into a normal and a
+      long-tail subspace, and the units that fire give a readable reason for every flagged frame.
+      Several units correspond to nameable conditions and can be used as retrieval keys over
+      unlabelled data. <br>
       <a href="https://github.com/CCC917111/long-tail-driving-scene-discovery">Code</a></li>
 
       <li><strong>CNN-Mamba Forest Type Segmentation</strong> <br>
-      Fall 2025, course project with Qianhua Wan, Cherng Khai Hng and Jiawei Li <br>
-      Pixel-level forest type mapping from satellite data, where the hard part is telling natural
-      forest from planted forest and tree crops rather than forest from non-forest. We built a
-      multi-modal CNN-Mamba model that combines Sentinel-2 optical time series, climate variables and
-      elevation: Mamba state-space blocks model the temporal sequence and the global spatial context
-      in linear time, convolutional encoders capture local structure, a dynamic fusion module weights
-      the three modalities per sample, and a U-Net-style decoder restores full resolution. On the ForTy
-      benchmark, trained on only 12.5% of the data, it outperformed the UNet3D and UTAE baselines and
-      was competitive with MTSViT. <br>
+      Pixel-level forest type mapping from Sentinel-2 time series, climate variables and elevation,
+      evaluated on the ForTy v1 benchmark. A Mamba-2 selective state-space block handles the temporal
+      axis, a structure-aware fusion layer mixes each patch with its neighbours in the bottleneck,
+      and a dynamic fusion module weights the three modalities per sample. Includes a command-line
+      tool that applies a trained checkpoint to new tiles. <br>
       <a href="https://github.com/CCC917111/geospatial-mamba-deforestation">Code</a></li>
     </ul>
 
