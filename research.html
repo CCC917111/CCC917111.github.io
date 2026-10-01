@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research - Yike Chen</title>
-<meta name="description" content="Research on LLM pricing agents, zero-shot strategic bidding, coupled electricity-carbon market simulation and LLM post-training.">
+<meta name="description" content="Research on LLM pricing agents, zero-shot strategic bidding and coupled electricity-carbon market simulation.">
 <link rel="canonical" href="https://ccc917111.github.io/research.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Research - Yike Chen">
-<meta property="og:description" content="Research on LLM pricing agents, zero-shot strategic bidding, coupled electricity-carbon market simulation and LLM post-training.">
+<meta property="og:description" content="Research on LLM pricing agents, zero-shot strategic bidding and coupled electricity-carbon market simulation.">
 <meta property="og:url" content="https://ccc917111.github.io/research.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -75,16 +75,6 @@
       evaluate bids it did not submit. In a congested-market experiment the framework roughly halved
       a rolling price-volatility measure. <br>
       <a href="https://doi.org/10.1016/j.renene.2026.126139">Paper</a></li>
-
-      <li><strong>Post-Training for Structured Multi-Label Extraction</strong> <br>
-      05/2025 - 07/2025, research assistant <br>
-      The task was to read free text and return industry and concept labels as valid JSON, where
-      both the label set and the format have to be right. I built the data pipeline for cleaning,
-      deduplication, class balancing and chat-format conversion, then fine-tuned Qwen3-8B with LoRA
-      in a supervised stage followed by a GRPO stage whose Jaccard-similarity reward also had to
-      parse and repair malformed JSON. Against supervised fine-tuning alone, label Jaccard
-      similarity rose from 27.6% to 60.6% and the share of parsable outputs from 97.5% to 100%.
-      Conducted on non-public data; no code release.</li>
     </ul>
   </div>
 
