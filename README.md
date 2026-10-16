@@ -30,6 +30,8 @@ when adding or renaming pages. Mark the active navigation link with
 - Project cards use `article.project-card`. Set `data-category` to `agents`,
   `statistics` or `vision` to participate in the topic filters.
 - Update descriptions and Open Graph metadata when a page's focus changes.
+- When shared CSS or JavaScript changes, update its `?v=` asset version on all
+  four pages so returning visitors receive the new design together.
 - Keep project leadership, original team credit and subsequent extensions clear.
 
 The pricing, representation-learning, forest-fusion and decision-system graphics
