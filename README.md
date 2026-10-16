@@ -9,9 +9,9 @@ self-contained: no package installation, JavaScript or build step is required.
 
 | File | Contents |
 |---|---|
-| `index.html` | Introduction, two selected studies, education and contact links |
-| `research.html` | Detailed studies, roles, dates and supporting work |
-| `publications.html` | Full author lists, venues, publication status and paper links |
+| `index.html` | Introduction, two featured studies with findings, related work, education and contact links |
+| `research.html` | Research questions, design choices, evidence, roles and supporting work |
+| `publications.html` | Plain-language summaries, full author lists, venues, status and paper links |
 | `projects.html` | Research software, with expandable method diagrams and results |
 | `assets/style.css` | Shared typography, responsive layouts and keyboard focus |
 | `assets/visuals/` | Conceptual method diagrams and the DWTS aggregate result chart |

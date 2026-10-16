@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://ccc917111.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yike Chen — Data Science &amp; Research">
-  <meta property="og:description" content="Selected research on language-model agents, markets and voting systems.">
+  <meta property="og:description" content="First-author research on strategic bidding, a market-simulation study in Renewable Energy, and project-led analysis of hidden audience support and voting rules.">
   <meta property="og:url" content="https://ccc917111.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=education-20261016">
+  <link rel="stylesheet" href="assets/style.css?v=content-20261016">
 </head>
 <body class="page page-home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,28 +35,33 @@
       </figure>
       <div class="cover-note">
         <p>I&rsquo;m a Data Science undergraduate at CUHK-Shenzhen, currently on exchange in the Department of Computer Science and Engineering at UC San Diego.</p>
-        <p>I study how language-model agents behave in markets, and lead a project on voting rules and hidden audience support in <em>Dancing with the Stars</em>.</p>
+        <p>I study language-model agents in changing markets. In my first-author <a href="publications.html#bidding">IEEE PES APPEEC 2026 study</a>, we combine cost-based reasoning and market feedback to adapt bids without fine-tuning.</p>
         <a href="research.html">More about my research</a>
       </div>
     </section>
 
     <section class="selected-work" aria-labelledby="work-title">
       <div class="section-heading">
-        <h2 id="work-title">Selected work</h2>
-        <a href="projects.html">All projects</a>
+        <h2 id="work-title">Selected research</h2>
+        <a href="research.html">All research</a>
       </div>
       <div class="work-grid">
         <article class="work-item">
-          <h3><a href="research.html#pricing">LLM pricing<br> agents</a></h3>
-          <p>Two language-model sellers compete in a market where demand changes. The study follows how their pricing responds to memory and regulatory oversight.</p>
-          <div class="work-links"><a href="research.html#pricing">The study</a><a href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">GitHub</a></div>
+          <p class="work-role">First author · IEEE PES APPEEC 2026</p>
+          <h3><a href="research.html#bidding">Strategic<br> bidding</a></h3>
+          <p>A generation company has to account for electricity and carbon costs. We separate cost calculation from strategic markup, then use rule checks and recent market feedback to guide a language-model bidder.</p>
+          <p class="work-finding">On the IEEE 14-bus system, it earned higher average profit than a fixed-markup baseline while clearing in every round, without fine-tuning.</p>
+          <div class="work-links"><a href="research.html#bidding">The study</a><a href="publications.html#bidding">Publication</a></div>
         </article>
         <article class="work-item">
+          <p class="work-role">Project lead · Original research with MCM Team 2627761</p>
           <h3><a href="research.html#dwts">DWTS voting<br> analysis</a></h3>
-          <p>A 34-season study of voting rules, audience support and eliminations. I lead the current project, building on our team&rsquo;s MCM research.</p>
+          <p>What can public scores and eliminations reveal when audience votes stay private? I lead a project combining Bayesian support models, voting-rule comparisons and historical elimination forecasts, building on our MCM team study.</p>
+          <p class="work-finding">Under a declared deterministic voting rule, many vote allocations can explain the same exit. Comparing alternative rules therefore requires explicit assumptions about the hidden votes.</p>
           <div class="work-links"><a href="research.html#dwts">The study</a><a href="https://github.com/CCC917111/DWTS_voting_analysis">GitHub</a></div>
         </article>
       </div>
+      <p class="research-note">In our <em>Renewable Energy</em> paper, <a href="publications.html#llm-cecm">LLM-CECM</a>, I built the simulation pipeline for an IEEE 118-bus market study. My <a href="research.html#pricing">ongoing pricing research</a> examines memory and regulatory oversight in repeated competition.</p>
     </section>
 
     <section class="education" aria-labelledby="education-title">
