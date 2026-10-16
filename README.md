@@ -9,7 +9,7 @@ self-contained: no package installation, JavaScript or build step is required.
 
 | File | Contents |
 |---|---|
-| `index.html` | Introduction, two selected studies and contact links |
+| `index.html` | Introduction, two selected studies, education and contact links |
 | `research.html` | Detailed studies, roles, dates and supporting work |
 | `publications.html` | Full author lists, venues, publication status and paper links |
 | `projects.html` | Research software, with expandable method diagrams and results |
