@@ -17,6 +17,8 @@ self-contained: no package installation, JavaScript or build step is required.
 | `assets/visuals/` | Conceptual method diagrams and the DWTS aggregate result chart |
 | `assets/visuals/abstract-study.svg` | Original decorative composition for the homepage |
 | `assets/favicon.svg` | Site icon |
+| `assets/figures/` | Responsive DWTS uncertainty figure, PNG export and three plotted aggregate comparisons |
+| `scripts/render_dwts_comparison.py` | Optional Matplotlib figure generator; not required to serve the site |
 
 The four pages share navigation and footer markup. Keep those blocks consistent
 when editing. Mark the current navigation link with `aria-current="page"` and
@@ -45,6 +47,28 @@ The homepage artwork is a decorative composition of curves and an ultramarine
 field. It represents no measurements or research result and is hidden from
 assistive technology. Keep it separate from readable text when adjusting the
 cover layout.
+
+## DWTS uncertainty figure
+
+The Research page shows three selected paired log-loss contrasts from the
+historical outer-validation study: 86 eligible eliminations across 12 seasons.
+Each row names its own baseline. Lines are 95% whole-season bootstrap intervals
+from 20,000 draws, conditional on fitted predictions. They exclude uncertainty
+from refitting, model selection and repeated historical exploration. All three
+intervals span zero; this does not establish equivalence or prospective gains.
+
+The three plotted rows in `assets/figures/dwts-comparison.csv` are aggregate
+results copied from the [frozen source table](https://github.com/CCC917111/DWTS_voting_analysis/blob/5efde6487cb36a92f0f8d9f3141ec6756e30af11/results/exit_forecast_study/paired_differences.csv).
+They contain no original observations or individual predictions. To regenerate
+the desktop SVG/PNG and phone SVG, with Matplotlib installed:
+
+```bash
+python3 scripts/render_dwts_comparison.py
+```
+
+The site serves these static files directly. The figure has a phone-specific
+layout, full-size links and an expandable HTML table with the displayed
+values and source link.
 
 ## Local preview
 

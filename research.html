@@ -11,7 +11,7 @@
   <meta property="og:description" content="Research on LLM pricing agents, DWTS voting systems, zero-shot strategic bidding and coupled electricity-carbon market simulation.">
   <meta property="og:url" content="https://ccc917111.github.io/research.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=content-20261016">
+  <link rel="stylesheet" href="assets/style.css?v=figure-20261016">
 </head>
 <body class="page page-research">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -74,6 +74,33 @@
           <p>A separate identification analysis finds that many fan-share allocations can be compatible with the same observed exit. Its feasible regions depend on a declared deterministic voting rule; they are distinct from posterior credible intervals. Recovering a single plausible allocation therefore does not establish the actual vote totals.</p>
           <h3 class="study-subtitle">A simpler predictor was hard to improve on</h3>
           <p>A separate forecasting study evaluates 86 eligible outer-validation eliminations across 12 seasons. It uses current judges&rsquo; scores and earlier score histories, selecting settings on earlier seasons and freezing probabilities before revealing each outcome. A two-feature predictor had the best outer-validation point log loss: 1.5040, versus 1.5414 for current scores alone. The paired season-bootstrap interval for that difference spans zero, so the apparent gain remains uncertain. Extra online adaptation did not consistently improve on the simpler fixed mixture.</p>
+          <figure class="research-figure" id="dwts-comparison" aria-labelledby="dwts-chart-title">
+            <a class="figure-image" href="assets/figures/dwts-comparison.svg" aria-label="Open the full-size DWTS comparison figure">
+              <picture>
+                <source media="(max-width: 700px)" srcset="assets/figures/dwts-comparison-mobile.svg" width="360" height="820">
+                <img src="assets/figures/dwts-comparison.svg" width="840" height="520" loading="lazy" decoding="async" alt="Three paired log-loss differences, all with 95% intervals crossing zero: two-feature choice versus current scores, -0.0374 [-0.0980, +0.0174]; selected fixed-share versus fixed online mixture, +0.0046 [-0.0065, +0.0198]; selected tempered versus fixed online mixture, -0.0023 [-0.0150, +0.0086]. Negative values favor the candidate.">
+              </picture>
+            </a>
+            <figcaption>
+              <p id="dwts-chart-title"><strong>Selected historical outer-validation comparisons.</strong> Each dot is a candidate-minus-baseline difference in mean log loss; lines are 95% paired whole-season bootstrap intervals from 20,000 draws. All three intervals span zero.</p>
+              <p>Intervals condition on fitted predictions and exclude refitting, model-selection and repeated-exploration uncertainty.</p>
+              <div class="figure-links"><a href="assets/figures/dwts-comparison.svg">Full-size SVG</a><a href="assets/figures/dwts-comparison.png" download>Download PNG</a></div>
+            </figcaption>
+          </figure>
+          <details class="result-data">
+            <summary>Values and source</summary>
+            <table>
+              <caption>86 outer-validation eliminations across 12 seasons. Negative differences favor the candidate.</caption>
+              <colgroup><col class="comparison-column"><col class="difference-column"><col class="interval-column"></colgroup>
+              <thead><tr><th scope="col">Comparison</th><th scope="col">Change</th><th scope="col">95% interval</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Two-feature choice<span>vs current-score model</span></th><td>-0.0374</td><td>[-0.0980,<wbr> +0.0174]</td></tr>
+                <tr><th scope="row">Selected fixed-share<span>vs fixed online mixture</span></th><td>+0.0046</td><td>[-0.0065,<wbr> +0.0198]</td></tr>
+                <tr><th scope="row">Selected tempered<span>vs fixed online mixture</span></th><td>-0.0023</td><td>[-0.0150,<wbr> +0.0086]</td></tr>
+              </tbody>
+            </table>
+            <p><a href="https://github.com/CCC917111/DWTS_voting_analysis/blob/5efde6487cb36a92f0f8d9f3141ec6756e30af11/results/exit_forecast_study/paired_differences.csv">Source aggregate table</a> · <a href="assets/figures/dwts-comparison.csv" download>Download plotted data (CSV)</a></p>
+          </details>
           <p>The forecasting evidence is retrospective, on previously examined data, and does not validate hidden audience votes. Independent prospective validation remains outstanding. The linked provenance distinguishes our original team research from the AI-assisted post-report software and experiments.</p>
           <div class="link-row">
             <a class="text-link" href="https://github.com/CCC917111/DWTS_voting_analysis">View code <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
