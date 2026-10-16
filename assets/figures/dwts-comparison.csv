@@ -1,0 +1,4 @@
+phase,candidate,baseline,metric,difference,lower,upper,n_events,n_seasons,draws
+nested_development,choice_two,current_judges,log_loss,-0.037384632075699024,-0.09800414181521165,0.017391252844020336,86,12,20000
+nested_development,selected_fixed_share,online_bayes,log_loss,0.004572735394701087,-0.006481581362783303,0.019778768300748456,86,12,20000
+nested_development,selected_tempered,online_bayes,log_loss,-0.002341859204731156,-0.014978712535015913,0.008563160598295108,86,12,20000
