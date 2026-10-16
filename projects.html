@@ -11,21 +11,19 @@
   <meta property="og:description" content="Research software for LLM pricing agents, DWTS voting analysis, long-tail driving scene discovery and CNN-Mamba forest type segmentation.">
   <meta property="og:url" content="https://ccc917111.github.io/projects.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=portfolio-20261016">
-  <script src="assets/site.js?v=portfolio-20261016" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=minimal-20261016">
 </head>
 <body class="page page-projects">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YC</span><span>Yike Chen</span></a>
+      <a class="brand" href="index.html">Yike Chen</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="projects.html" aria-current="page">Projects</a>
       </nav>
-      <a class="header-contact" href="mailto:yikechen@link.cuhk.edu.cn">Get in touch</a>
     </div>
   </header>
 
@@ -36,33 +34,36 @@
       <p class="page-lede">Software for studying agent behavior, analyzing voting systems and learning from visual and geospatial data.</p>
     </section>
 
-    <div class="project-filters" hidden role="group" aria-label="Filter projects">
-      <button type="button" data-filter="all" aria-pressed="true" aria-controls="project-list">All projects</button>
-      <button type="button" data-filter="agents" aria-pressed="false" aria-controls="project-list">Agents &amp; markets</button>
-      <button type="button" data-filter="statistics" aria-pressed="false" aria-controls="project-list">Statistical modeling</button>
-      <button type="button" data-filter="vision" aria-pressed="false" aria-controls="project-list">Computer vision</button>
-    </div>
-
     <section class="project-grid" id="project-list" aria-label="Software projects">
-      <article class="project-card" id="pricing" data-category="agents">
-        <div class="project-topline"><span class="project-number">01</span><span class="project-kind">Research software</span></div>
+      <article class="project-card" id="pricing">
+        <div class="project-topline"><span class="project-number">01</span></div>
         <h2>LLM Pricing Agents in Dynamic Markets</h2>
-        <img class="project-visual" src="assets/visuals/pricing-loop.svg" width="720" height="400" alt="Conceptual diagram of the pricing-agent experiment." loading="lazy" decoding="async">
         <p>Research codebase for the pricing study: a calibrated logit market, structured model clients with persistent private notes, a regulator implementing passive, revision and veto oversight, and the round loop that ties them together. The repository publishes the full run records, the provenance of every figure, and the ambiguities found in the protocol it replicates.</p>
-        <div class="tag-list"><span class="tag">Language models</span><span class="tag">Market simulation</span></div>
+        <details class="project-method">
+          <summary>Method diagram</summary>
+          <a class="visual-link" href="assets/visuals/pricing-loop.svg" aria-label="Open the pricing-agent method diagram at full size">
+            <img class="project-visual" src="assets/visuals/pricing-loop.svg" width="720" height="400" alt="Conceptual diagram of the pricing-agent experiment." loading="lazy" decoding="async">
+            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">View code <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="text-link" href="research.html#pricing">Research <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
-      <article class="project-card" id="dwts" data-category="statistics">
-        <div class="project-topline"><span class="project-number">02</span><span class="project-kind">Research software</span></div>
+      <article class="project-card" id="dwts">
+        <div class="project-topline"><span class="project-number">02</span></div>
         <h2>DWTS Voting Analysis</h2>
-        <a class="visual-link" href="assets/visuals/dwts-forecast.svg" aria-label="Open the historical DWTS forecasting chart at full size"><img class="project-visual" src="assets/visuals/dwts-forecast.svg" width="720" height="400" alt="Aggregate chronological forecasting comparison for the DWTS study." loading="lazy" decoding="async"></a>
-        <p>Python research software for data preparation, Bayesian fan-support modeling, voting-rule comparisons and elimination forecasts. The forecasting workflow records each prediction before the outcome is released, selects settings using earlier seasons and updates expert weights only after release.</p>
+        <p>Python research software for data preparation, Bayesian fan-support modeling, voting-rule comparisons and elimination forecasts. The historical forecasting workflow records each prediction before the corresponding outcome is revealed to the model, selects settings using earlier seasons and updates expert weights only after that reveal.</p>
         <p>The repository includes experiment configurations, aggregate results, uncertainty analyses and runnable synthetic demonstrations. The v0.7.0 release is checked by 482 automated tests.</p>
-        <div class="tag-list"><span class="tag">Python</span><span class="tag">Bayesian modeling</span><span class="tag">Forecasting</span></div>
+        <details class="project-method">
+          <summary>Historical comparison</summary>
+          <a class="visual-link" href="assets/visuals/dwts-forecast.svg" aria-label="Open the historical DWTS forecasting chart at full size">
+            <img class="project-visual" src="assets/visuals/dwts-forecast.svg" width="720" height="400" alt="Aggregate chronological forecasting comparison for the DWTS study." loading="lazy" decoding="async">
+            <span class="visual-open">Open full-size chart <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/DWTS_voting_analysis">View code <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="text-link" href="https://github.com/CCC917111/DWTS_voting_analysis/blob/main/docs/METHODS.md">Methods <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -70,56 +71,44 @@
         </div>
       </article>
 
-      <article class="project-card" id="long-tail" data-category="vision">
-        <div class="project-topline"><span class="project-number">03</span><span class="project-kind">Applied machine learning</span></div>
+      <article class="project-card" id="long-tail">
+        <div class="project-topline"><span class="project-number">03</span></div>
         <h2>Long-Tail Driving Scene Discovery</h2>
-        <img class="project-visual" src="assets/visuals/long-tail.svg" width="720" height="400" alt="Conceptual diagram of vision-language features, sparse decomposition and long-tail retrieval." loading="lazy" decoding="async">
         <p>Rare, safety-critical driving scenes are hard to find because they are not statistical outliers - a wheelchair user at a crossing looks like an ordinary street scene. This project searches the hidden states of a frozen vision-language model instead of the images: a sparse autoencoder trained with a tail-guided objective splits the representation into a normal and a long-tail subspace, and the units that fire give a readable reason for every flagged frame. Several units correspond to nameable conditions and can be used as retrieval keys over unlabelled data.</p>
-        <div class="tag-list"><span class="tag">Vision-language models</span><span class="tag">Sparse autoencoders</span></div>
+        <details class="project-method">
+          <summary>Method diagram</summary>
+          <a class="visual-link" href="assets/visuals/long-tail.svg" aria-label="Open the long-tail discovery method diagram at full size">
+            <img class="project-visual" src="assets/visuals/long-tail.svg" width="720" height="400" alt="Conceptual diagram of vision-language features, sparse decomposition and long-tail retrieval." loading="lazy" decoding="async">
+            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/long-tail-driving-scene-discovery">View code <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
-      <article class="project-card" id="forest" data-category="vision">
-        <div class="project-topline"><span class="project-number">04</span><span class="project-kind">Applied machine learning</span></div>
+      <article class="project-card" id="forest">
+        <div class="project-topline"><span class="project-number">04</span></div>
         <h2>CNN-Mamba Forest Type Segmentation</h2>
-        <img class="project-visual" src="assets/visuals/forest-fusion.svg" width="720" height="400" alt="Conceptual diagram of temporal, spatial and multimodal forest-type segmentation." loading="lazy" decoding="async">
         <p>Pixel-level forest type mapping from Sentinel-2 time series, climate variables and elevation, evaluated on the ForTy v1 benchmark. A Mamba-2 selective state-space block handles the temporal axis, a structure-aware fusion layer mixes each patch with its neighbours in the bottleneck, and a dynamic fusion module weights the three modalities per sample. Includes a command-line tool that applies a trained checkpoint to new tiles.</p>
-        <div class="tag-list"><span class="tag">Remote sensing</span><span class="tag">Semantic segmentation</span></div>
+        <details class="project-method">
+          <summary>Method diagram</summary>
+          <a class="visual-link" href="assets/visuals/forest-fusion.svg" aria-label="Open the forest-type segmentation method diagram at full size">
+            <img class="project-visual" src="assets/visuals/forest-fusion.svg" width="720" height="400" alt="Conceptual diagram of temporal, spatial and multimodal forest-type segmentation." loading="lazy" decoding="async">
+            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation">View code <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
     </section>
 
-    <section class="skills-section" aria-labelledby="skills-title">
-      <div class="section-heading"><h2 id="skills-title">Technical background</h2></div>
-      <div class="skills-grid">
-        <article class="skill-group">
-          <h3>Programming</h3>
-          <ul><li>Python</li><li>Java</li><li>MATLAB</li></ul>
-        </article>
-        <article class="skill-group">
-          <h3>Machine learning</h3>
-          <ul><li>PyTorch</li><li>TensorFlow</li><li>Hugging Face Transformers</li><li>LoRA, SFT, GRPO</li></ul>
-        </article>
-        <article class="skill-group">
-          <h3>Data and computing</h3>
-          <ul><li>NumPy</li><li>Pandas</li><li>Apache Spark</li></ul>
-        </article>
-        <article class="skill-group">
-          <h3>Tools</h3>
-          <ul><li>Git</li><li>Linux</li><li>Docker</li></ul>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-inner">
       <p class="footer-name">Yike Chen</p>
-      <p class="footer-note">Data science · CUHK-Shenzhen</p>
       <div class="footer-links">
         <a href="mailto:yikechen@link.cuhk.edu.cn">Email</a>
         <a href="https://github.com/CCC917111">GitHub</a>
