@@ -1,9 +1,9 @@
 # Yike Chen · Research Portfolio
 
-A minimal personal website built around a short introduction and selected work.
-Detailed studies, publications and research software live on their own pages.
-Static HTML and CSS keep the site self-contained: no package installation,
-JavaScript or build step is required.
+A personal research portfolio with a cover-like homepage: oversized type, an
+original abstract print and a short introduction. Detailed studies, publications
+and research software live on their own pages. Static HTML and CSS keep the site
+self-contained: no package installation, JavaScript or build step is required.
 
 ## Site structure
 
@@ -15,6 +15,7 @@ JavaScript or build step is required.
 | `projects.html` | Research software, with expandable method diagrams and results |
 | `assets/style.css` | Shared typography, responsive layouts and keyboard focus |
 | `assets/visuals/` | Conceptual method diagrams and the DWTS aggregate result chart |
+| `assets/visuals/abstract-study.svg` | Original decorative composition for the homepage |
 | `assets/favicon.svg` | Site icon |
 
 The four pages share navigation and footer markup. Keep those blocks consistent
@@ -39,6 +40,11 @@ workflows. The DWTS chart uses published v0.7.0 aggregate metrics from
 [DWTS Voting Analysis](https://github.com/CCC917111/DWTS_voting_analysis/tree/main/results/exit_forecast_study).
 Its historical evaluation populations and exploratory scope are part of the
 figure; retain these labels when updating it.
+
+The homepage artwork is a decorative composition of curves and an ultramarine
+field. It represents no measurements or research result and is hidden from
+assistive technology. Keep it separate from readable text when adjusting the
+cover layout.
 
 ## Local preview
 
