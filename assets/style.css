@@ -56,6 +56,10 @@ p { margin-bottom: 18px; }
 .work-item > p { max-width: 360px; color: var(--body); font-size: 14px; line-height: 1.85; margin: 0; }
 .work-links { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 24px; }
 .work-links a { font-size: 12px; }
+.education { display: grid; grid-template-columns: 140px 1fr 1fr; gap: 48px; padding: 28px 0 78px; border-top: 1px solid var(--line); }
+.education > h2 { margin: 4px 0 0; font-family: var(--sans); font-size: 15px; }
+.education-entry h3 { max-width: 340px; margin-bottom: 15px; font-family: var(--serif); font-size: 26px; letter-spacing: -.025em; line-height: 1.2; }
+.education-entry p { margin: 0; color: var(--body); font-size: 12px; line-height: 1.9; }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; padding: 28px 0 35px; border-top: 1px solid var(--line); }
 .footer-inner p { margin: 0; }
 .footer-name { font-family: var(--serif); font-size: 21px; letter-spacing: -.04em; }
@@ -139,6 +143,9 @@ p { margin-bottom: 18px; }
   .work-item > p { font-size: 13px; }
   .work-links { margin-top: 19px; }
   .work-links a { font-size: 11px; }
+  .education { grid-template-columns: 1fr; gap: 28px; padding: 23px 0 49px; }
+  .education > h2 { margin: 0; font-size: 14px; }
+  .education-entry h3 { max-width: 320px; font-size: 25px; margin-bottom: 11px; }
   .text-link { font-size: 11px; }
   .footer-inner { padding: 24px 0 29px; gap: 18px 22px; }
   .footer-name { font-size: 20px; }
