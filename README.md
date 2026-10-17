@@ -82,6 +82,21 @@ Check all four pages on desktop and phone widths, navigation and anchor links,
 keyboard focus, expandable figures and image loading. Original reports, raw
 research data and private verification artifacts do not belong in this site.
 
+### Single-file previews
+
+Opening just an HTML source file in a document viewer may omit its sibling CSS
+and images. To create previews that display without those extra files:
+
+```bash
+python3 scripts/export_preview.py --out /tmp/portfolio-preview
+```
+
+Use a new directory outside the checkout. Each exported page embeds its styles,
+favicon and responsive images; navigation and download links point to the live
+website. No package installation is needed. Generated preview copies stay
+outside the published source. Inline arrow icons also carry explicit dimensions
+so a stylesheet failure cannot enlarge them.
+
 ## Publishing
 
 Push reviewed changes to `main` and confirm the **pages build and deployment**
