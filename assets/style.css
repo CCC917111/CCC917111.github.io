@@ -59,6 +59,7 @@ p { margin-bottom: 18px; }
 .work-links { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 24px; }
 .work-links a { font-size: 12px; }
 .research-note { max-width: 720px; margin: 60px 0 0 95px; color: var(--body); font-size: 13px; line-height: 1.9; }
+.research-note + .research-note { margin-top: 18px; }
 .education { display: grid; grid-template-columns: 140px 1fr 1fr; gap: 48px; padding: 28px 0 78px; border-top: 1px solid var(--line); }
 .education > h2 { margin: 4px 0 0; font-family: var(--sans); font-size: 15px; }
 .education-entry h3 { max-width: 340px; margin-bottom: 15px; font-family: var(--serif); font-size: 26px; letter-spacing: -.025em; line-height: 1.2; }
@@ -127,6 +128,8 @@ p { margin-bottom: 18px; }
 .project-number { color: var(--muted); font-size: 11px; }
 .project-card h2 { max-width: 800px; font-family: var(--serif); font-size: 36px; letter-spacing: -.03em; margin-bottom: 23px; }
 .project-card > p { max-width: 760px; color: var(--body); font-size: 14px; line-height: 1.95; }
+.project-card > .project-context { margin-bottom: 12px; color: var(--accent); font-size: 11px; }
+.coursework .project-card h3 { max-width: 800px; margin-bottom: 18px; font-family: var(--serif); font-size: 29px; letter-spacing: -.025em; }
 .project-method { max-width: 760px; margin: 3px 0 0; }
 .project-method summary { width: fit-content; padding: 6px 0; font-size: 12px; color: var(--accent); cursor: pointer; }
 .project-method[open] summary { margin-bottom: 15px; }
@@ -212,6 +215,8 @@ p { margin-bottom: 18px; }
   .project-number { font-size: 10px; }
   .project-card h2 { font-size: 30px; margin-bottom: 20px; }
   .project-card > p { font-size: 13px; }
+  .project-card > .project-context { font-size: 10px; }
+  .coursework .project-card h3 { font-size: 25px; }
   .project-method summary, .visual-open { font-size: 11px; }
 }
 @media (max-width: 360px) {

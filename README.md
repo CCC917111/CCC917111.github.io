@@ -9,10 +9,10 @@ self-contained: no package installation, JavaScript or build step is required.
 
 | File | Contents |
 |---|---|
-| `index.html` | Introduction, two featured studies with findings, related work, education and contact links |
-| `research.html` | Research questions, design choices, evidence, roles and supporting work |
+| `index.html` | Introduction, two featured studies with findings, related market and visual-learning work, education and contact links |
+| `research.html` | Research questions, design choices, evidence, roles and the forest-mapping pilot |
 | `publications.html` | Plain-language summaries, full author lists, venues, status and paper links |
-| `projects.html` | Research software, with expandable method diagrams and results |
+| `projects.html` | Five research-software entries and three compact course projects, with source and result links |
 | `assets/style.css` | Shared typography, responsive layouts and keyboard focus |
 | `assets/visuals/` | Conceptual method diagrams and the DWTS aggregate result chart |
 | `assets/visuals/abstract-study.svg` | Original decorative composition for the homepage |
@@ -36,12 +36,26 @@ keep the skip link pointed at `#main`.
 - Update descriptions and Open Graph metadata when a page's focus changes.
 - When changing shared CSS, update its `?v=` version on all four pages.
 - Keep project leadership, original team credit and subsequent extensions clear.
+- Cover the public software repositories without treating coursework as a paper
+  or a small pilot as a benchmark result. Project source and result links should
+  support the stated method, role and evaluation scope.
 
-The pricing, representation-learning and forest-fusion graphics are conceptual
-workflows. The DWTS chart uses published v0.7.0 aggregate metrics from
+The pricing and forest-fusion graphics are conceptual workflows. The forest
+model uses custom Mamba-inspired selective state-space blocks. The long-tail
+graphic depicts the original VLM/SAE concept; the completed CPU follow-up uses
+ResNet18 features, and semantic interpretations still require validation.
+The DWTS chart uses published v0.7.0 aggregate metrics from
 [DWTS Voting Analysis](https://github.com/CCC917111/DWTS_voting_analysis/tree/main/results/exit_forecast_study).
 Its historical evaluation populations and exploratory scope are part of the
 figure; retain these labels when updating it.
+
+The Projects page also links the public LLM-CECM paper companion and its related
+LLM-CEMC-organized source archive, the pricing
+study's stationary and passive demand-cycle releases, and the forest project's
+three-seed ForTy pilot. The latter compares six runs on 146 shared test tiles;
+its seed sensitivity and different parameter counts belong with the scores.
+Hull Tactical, Transformer arithmetic and recurrent image captioning appear
+under course projects, with their implementation scope and contribution credit.
 
 The homepage artwork is a decorative composition of curves and an ultramarine
 field. It represents no measurements or research result and is hidden from

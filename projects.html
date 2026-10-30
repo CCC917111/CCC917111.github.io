@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects - Yike Chen</title>
-  <meta name="description" content="Research software for LLM pricing agents, DWTS voting analysis, long-tail driving scene discovery and CNN-Mamba forest type segmentation.">
+  <meta name="description" content="Projects by Yike Chen: multimodal forest mapping, pricing agents, voting analysis, driving-scene review and market simulation, plus selected coursework.">
   <link rel="canonical" href="https://ccc917111.github.io/projects.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects - Yike Chen">
-  <meta property="og:description" content="Research software for LLM pricing agents, DWTS voting analysis, long-tail driving scene discovery and CNN-Mamba forest type segmentation.">
+  <meta property="og:description" content="Projects by Yike Chen: multimodal forest mapping, pricing agents, voting analysis, driving-scene review and market simulation, plus selected coursework.">
   <meta property="og:url" content="https://ccc917111.github.io/projects.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=figure-20261016">
+  <link rel="stylesheet" href="assets/style.css?v=portfolio-20261029">
 </head>
 <body class="page page-projects">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -31,37 +31,70 @@
     <section class="page-intro">
       <p class="eyebrow">Projects</p>
       <h1 class="serif">Projects</h1>
-      <p class="page-lede">Software for studying agent behavior, analyzing voting systems and learning from visual and geospatial data.</p>
+      <p class="page-lede">From language-model markets to satellite imagery: the software, experiments and evaluation tools behind my work.</p>
     </section>
 
-    <section class="project-grid" id="project-list" aria-label="Software projects">
-      <article class="project-card" id="pricing">
+    <nav class="section-nav" aria-label="Project topics">
+      <a href="#forest">Forest mapping</a>
+      <a href="#pricing">Pricing agents</a>
+      <a href="#dwts">Voting systems</a>
+      <a href="#long-tail">Driving scenes</a>
+      <a href="#llm-cecm">Market simulation</a>
+      <a href="#coursework">Course projects</a>
+    </nav>
+
+    <section class="project-grid" id="project-list" aria-label="Research software and experiments">
+      <article class="project-card" id="forest">
         <div class="project-topline"><span class="project-number">01</span></div>
-        <h2>LLM Pricing Agents in Dynamic Markets</h2>
-        <p>Research codebase for the pricing study: a calibrated logit market, structured model clients with persistent private notes, a regulator implementing passive, revision and veto oversight, and the round loop that ties them together. The repository publishes the full run records, the provenance of every figure, and the ambiguities found in the protocol it replicates.</p>
+        <p class="project-context">Project lead · Four-person deep-learning course project</p>
+        <h2>CNN-Mamba Forest Type Segmentation</h2>
+        <p>I led a project on nine-class forest-type mapping from four seasonal Sentinel-2 composites, terrain and climate. The TensorFlow pipeline combines convolutional encoders with custom Mamba-inspired selective state-space blocks, and supports controlled training, checkpoint restoration and tile prediction.</p>
+        <p>In a three-seed pilot on 146 shared ForTy test tiles, mean macro F1 was 39.30% with the state-space blocks and 38.19% for CNN-only. Two seeds improved and one regressed; the larger model has 53.6% more parameters. This is a small-cohort comparison, and full-benchmark evaluation remains pending.</p>
         <details class="project-method">
           <summary>Method diagram</summary>
-          <a class="visual-link" href="assets/visuals/pricing-loop.svg" aria-label="Open the pricing-agent method diagram at full size">
-            <img class="project-visual" src="assets/visuals/pricing-loop.svg" width="720" height="400" alt="Conceptual diagram of the pricing-agent experiment." loading="lazy" decoding="async">
+          <a class="visual-link" href="assets/visuals/forest-fusion.svg" aria-label="Open the full-size method diagram">
+            <img class="project-visual" src="assets/visuals/forest-fusion.svg" width="720" height="400" alt="Conceptual workflow combining seasonal optical imagery, terrain and climate with custom selective state-space blocks." loading="lazy" decoding="async">
+            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </details>
+        <div class="link-row">
+          <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation/blob/main/results/architecture_pilot_t4_20261029/README.md">Three-seed pilot <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="research.html#forest">Research <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-card" id="pricing">
+        <div class="project-topline"><span class="project-number">02</span></div>
+        <p class="project-context">Agent-based market experiments</p>
+        <h2>LLM Pricing Agents in Dynamic Markets</h2>
+        <p>Two language-model sellers compete in a simulated pricing market, carry private notes between rounds, and face passive monitoring, revision requests or price caps. The public release contains 15 stationary-market runs and five 80-round passive demand-cycle runs, with price trajectories, selected agent text and scripts that rebuild the figures without new model calls.</p>
+        <p>The dynamic runs follow two expansion-contraction cycles while static price benchmarks stay fixed. Matched stationary controls, memory interventions and tests of collusive punishment remain future work.</p>
+        <details class="project-method">
+          <summary>Method diagram</summary>
+          <a class="visual-link" href="assets/visuals/pricing-loop.svg" aria-label="Open the full-size method diagram">
+            <img class="project-visual" src="assets/visuals/pricing-loop.svg" width="720" height="400" alt="Conceptual diagram of repeated pricing, private agent notes, market feedback and regulatory oversight." loading="lazy" decoding="async">
             <span class="visual-open">Open full-size diagram <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
         </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents/tree/main/results/arm2-cycle">Demand-cycle results <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="text-link" href="research.html#pricing">Research <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="project-card" id="dwts">
-        <div class="project-topline"><span class="project-number">02</span></div>
+        <div class="project-topline"><span class="project-number">03</span></div>
+        <p class="project-context">Project lead · Original research with MCM Team 2627761</p>
         <h2>DWTS Voting Analysis</h2>
         <p>Python research software with separate workflows for latent fan-support inference, voting-rule comparisons and score-based elimination forecasting. Historical forecasts are recorded before each outcome is revealed to the model, settings are selected using earlier seasons, and expert weights update only after that reveal.</p>
-        <p>The repository includes experiment configurations, aggregate results, uncertainty analyses and runnable synthetic demonstrations. The v0.7.0 release is checked by 482 automated tests.</p>
+        <p>The published release includes experiment configurations, aggregate results, uncertainty analyses and runnable synthetic demonstrations. The forecasting study covers 86 outer-validation eliminations across 12 seasons; its historical comparisons do not validate the private audience votes.</p>
         <details class="project-method">
           <summary>Historical comparison</summary>
-          <a class="visual-link" href="assets/visuals/dwts-forecast.svg" aria-label="Open the historical DWTS forecasting chart at full size">
+          <a class="visual-link" href="assets/visuals/dwts-forecast.svg" aria-label="Open the full-size historical comparison">
             <img class="project-visual" src="assets/visuals/dwts-forecast.svg" width="720" height="400" alt="Aggregate chronological forecasting comparison for the DWTS study." loading="lazy" decoding="async">
-            <span class="visual-open">Open full-size chart <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
         </details>
         <div class="link-row">
@@ -72,38 +105,73 @@
       </article>
 
       <article class="project-card" id="long-tail">
-        <div class="project-topline"><span class="project-number">03</span></div>
+        <div class="project-topline"><span class="project-number">04</span></div>
+        <p class="project-context">Original capstone contributor · Current project lead</p>
         <h2>Long-Tail Driving Scene Discovery</h2>
-        <p>Rare, safety-critical driving scenes are hard to find because they are not statistical outliers - a wheelchair user at a crossing looks like an ordinary street scene. This project searches the hidden states of a frozen vision-language model instead of the images: a sparse autoencoder trained with a tail-guided objective splits the representation into a normal and a long-tail subspace, and the units that fire give a readable reason for every flagged frame. Several units correspond to nameable conditions and can be used as retrieval keys over unlabelled data.</p>
+        <p>A six-camera scene-review workflow comparing sparse autoencoders with logistic regression and an MLP on shared frozen image features. I contributed SAE feature extraction and training to the original team capstone and now lead the CPU workflow, evaluation and review interface.</p>
+        <p>The completed CPU follow-up uses ResNet18 features, scene-disjoint splits, train-only normalization and validation-selected thresholds. A browser explorer connects saved scores to sparse activations and review queues. It is a separate feature protocol from the original vision-language-model route.</p>
+        <p>The fitted test set has 15 timestamps, and a frozen-policy replay covers nine later timestamps. Both reference sets came from one reviewer after exposure to model-generated labels, so broader generalization and the meanings assigned to individual features remain unvalidated.</p>
         <details class="project-method">
-          <summary>Method diagram</summary>
-          <a class="visual-link" href="assets/visuals/long-tail.svg" aria-label="Open the long-tail discovery method diagram at full size">
-            <img class="project-visual" src="assets/visuals/long-tail.svg" width="720" height="400" alt="Conceptual diagram of vision-language features, sparse decomposition and long-tail retrieval." loading="lazy" decoding="async">
+          <summary>Original VLM / SAE concept</summary>
+          <a class="visual-link" href="assets/visuals/long-tail.svg" aria-label="Open the full-size original vlm / sae concept">
+            <img class="project-visual" src="assets/visuals/long-tail.svg" width="720" height="400" alt="Conceptual diagram of the original vision-language-model and sparse-autoencoder route; feature interpretations require validation." loading="lazy" decoding="async">
             <span class="visual-open">Open full-size diagram <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
         </details>
         <div class="link-row">
           <a class="text-link" href="https://github.com/CCC917111/long-tail-driving-scene-discovery">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/long-tail-driving-scene-discovery/blob/main/demo/README.md">Demo guide <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/long-tail-driving-scene-discovery/blob/main/docs/evaluation.md">Evaluation <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
-      <article class="project-card" id="forest">
-        <div class="project-topline"><span class="project-number">04</span></div>
-        <h2>CNN-Mamba Forest Type Segmentation</h2>
-        <p>Pixel-level forest type mapping from Sentinel-2 time series, climate variables and elevation, evaluated on the ForTy v1 benchmark. A Mamba-2 selective state-space block handles the temporal axis, a structure-aware fusion layer mixes each patch with its neighbours in the bottleneck, and a dynamic fusion module weights the three modalities per sample. Includes a command-line tool that applies a trained checkpoint to new tiles.</p>
-        <details class="project-method">
-          <summary>Method diagram</summary>
-          <a class="visual-link" href="assets/visuals/forest-fusion.svg" aria-label="Open the forest-type segmentation method diagram at full size">
-            <img class="project-visual" src="assets/visuals/forest-fusion.svg" width="720" height="400" alt="Conceptual diagram of temporal, spatial and multimodal forest-type segmentation." loading="lazy" decoding="async">
-            <span class="visual-open">Open full-size diagram <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
-        </details>
+      <article class="project-card" id="llm-cecm">
+        <div class="project-topline"><span class="project-number">05</span></div>
+        <p class="project-context">Co-author · Official code companion to Renewable Energy paper</p>
+        <h2>LLM-CECM Market Simulation</h2>
+        <p>Fifty generator agents trade in coupled electricity and carbon markets on the IEEE 118-bus system. I built the study&rsquo;s simulation pipeline, including preprocessing, parallel agent rollout, market-state updates and visualisation.</p>
+        <p>Adaptive decision frequency reserves language-model calls for consequential market changes. The reported simulation comparison uses 80.5% fewer model calls and 81.5% less runtime than full-frequency belief revision. The repository includes baselines, paper result tables and an offline end-to-end workflow with a mock model.</p>
         <div class="link-row">
-          <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/LLM-CECM">Official code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="text-link" href="https://github.com/CCC917111/LLM-CEMC-organized">Source archive <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="https://github.com/CCC917111/LLM-CECM/blob/main/results/README.md">Reported results <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="text-link" href="publications.html#llm-cecm">Publication <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
     </section>
 
+    <section class="project-grid coursework" id="coursework" aria-labelledby="coursework-title">
+      <h2 class="group-title" id="coursework-title">Course projects</h2>
+      <article class="project-card" id="hull">
+        <div class="project-topline"><span class="project-number">06</span></div>
+        <p class="project-context">Team coursework · LightGBM and XGBoost modeling</p>
+        <h3>Hull Tactical Market Prediction</h3>
+        <p>In this team course project for the Hull Tactical competition, I developed the LightGBM and XGBoost components of a return-prediction stack. The notebook combines tree models with Ridge regression and maps forecasts to portfolio exposure. The repository also documents the limitations of its historical evaluation.</p>
+        <div class="link-row">
+          <a class="text-link" href="https://github.com/CCC917111/hull-tactical-market-prediction">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-card" id="arithmetic">
+        <div class="project-topline"><span class="project-number">07</span></div>
+        <p class="project-context">Deep-learning coursework</p>
+        <h3>Transformer Arithmetic</h3>
+        <p>An encoder-decoder Transformer for signed two-digit addition and subtraction. The PyTorch implementation builds attention, decoder masking and token-by-token prediction, with a notebook connecting training to generated answers.</p>
+        <div class="link-row">
+          <a class="text-link" href="https://github.com/CCC917111/transformer-arithmetic">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-card" id="captioning">
+        <div class="project-topline"><span class="project-number">08</span></div>
+        <p class="project-context">Deep-learning coursework</p>
+        <h3>RNN / LSTM Image Captioning</h3>
+        <p>Image captioning with a pretrained RegNet encoder and RNN, LSTM and attention-based decoders. The implementation includes recurrent forward and backward passes, scaled dot-product spatial attention and greedy caption generation.</p>
+        <div class="link-row">
+          <a class="text-link" href="https://github.com/CCC917111/rnn-lstm-image-captioning">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">

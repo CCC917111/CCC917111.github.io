@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research - Yike Chen</title>
-  <meta name="description" content="Research on LLM pricing agents, DWTS voting systems, zero-shot strategic bidding and coupled electricity-carbon market simulation.">
+  <meta name="description" content="Research and experiments on language-model markets, hidden audience support and multimodal forest mapping, with methods, results and source code.">
   <link rel="canonical" href="https://ccc917111.github.io/research.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Research - Yike Chen">
-  <meta property="og:description" content="Research on LLM pricing agents, DWTS voting systems, zero-shot strategic bidding and coupled electricity-carbon market simulation.">
+  <meta property="og:description" content="Research and experiments on language-model markets, hidden audience support and multimodal forest mapping, with methods, results and source code.">
   <meta property="og:url" content="https://ccc917111.github.io/research.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=figure-20261016">
+  <link rel="stylesheet" href="assets/style.css?v=portfolio-20261029">
 </head>
 <body class="page page-research">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
     <section class="page-intro">
       <p class="eyebrow">Research</p>
       <h1 class="serif">Research</h1>
-      <p class="page-lede">My research follows language-model agents from electricity-carbon market simulation to strategic bidding and repeated pricing. A second line asks what public scores and eliminations can reveal about hidden audience support.</p>
+      <p class="page-lede">My research follows language-model agents from electricity-carbon market simulation to strategic bidding and repeated pricing. Other projects ask what public outcomes reveal about hidden support, and what seasonal imagery adds to forest-type mapping.</p>
     </section>
 
     <nav class="section-nav" aria-label="Research topics">
@@ -39,6 +39,7 @@
       <a href="#dwts">Voting systems</a>
       <a href="#llm-cecm">Market simulation</a>
       <a href="#pricing">LLM pricing</a>
+      <a href="#forest">Forest mapping</a>
     </nav>
 
     <section class="research-list" aria-label="Research studies">
@@ -119,9 +120,10 @@
         <div class="entry-content">
           <h2>LLM-CECM: Agent-Based Simulation of Coupled Electricity-Carbon Markets</h2>
           <p>I built the simulation pipeline for this study: data preprocessing, parallel agent rollout, market-state updates and visualisation. I ran the study on the IEEE 118-bus system, where generation companies act as language-model agents bidding into an electricity market coupled to a carbon market.</p>
-          <p>Two components address the cost of such a simulation and the quality of the decisions in it: an adaptive decision frequency that lets agents skip full reasoning when the market state has not moved, cutting model calls and runtime by roughly 80% against a matched full-frequency baseline, and counterfactual reasoning that lets an agent evaluate bids it did not submit. In a congested-market experiment the framework roughly halved a rolling price-volatility measure.</p>
+          <p>Two components address the cost of such a simulation and the quality of the decisions in it: adaptive decision frequency lets agents skip full reasoning when the market state has not moved, and counterfactual reasoning lets an agent evaluate bids it did not submit. In the reported comparison with full-frequency belief revision, adaptive decision frequency reduced model calls by 80.5% and runtime by 81.5%. In a separate congested-market experiment, the framework roughly halved a rolling price-volatility measure.</p>
           <div class="link-row">
             <a class="text-link" href="https://doi.org/10.1016/j.renene.2026.126139">Read paper <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="text-link" href="https://github.com/CCC917111/LLM-CECM">Official code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="text-link" href="publications.html#llm-cecm">Publication details <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
@@ -134,11 +136,34 @@
         </aside>
         <div class="entry-content">
           <h2>Strategic Adaptation of LLM Pricing Agents in Dynamic Markets</h2>
-          <p>This ongoing project studies large language models as autonomous pricing agents. Two LLM sellers compete repeatedly in a simulated market whose demand expands and contracts over time, under a regulator that can flag their prices, ask for a revision or cap them.</p>
-          <p>Each seller justifies its price publicly and keeps private notes that it carries into later rounds, which makes it possible to follow how pricing strategies form and change as the market moves, how market history and persistent memory shape that adaptation, and when it produces supracompetitive or collusive pricing.</p>
+          <p>Two language-model sellers compete repeatedly in a simulated market, carrying private notes between rounds. A regulator can monitor prices, request a revision or impose a cap. The public release contains 15 stationary-market runs across these three oversight modes, with executed prices and selected agent text.</p>
+          <p>The dynamic experiment varies market size through two expansion-contraction cycles over 80 rounds, while holding static price benchmarks fixed. Agents see past prices, their own sales and profits, and their previous notes; the demand equation and future path are withheld. Five passive-monitoring runs are publicly available, with scripts that rebuild the figures without new model calls.</p>
+          <p>These records let us compare what agents write with the prices they execute. Matched stationary controls, memory interventions and deviation tests remain future work; the current runs do not establish what causes price persistence or whether it constitutes collusion.</p>
           <div class="link-row">
             <a class="text-link" href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="text-link" href="https://github.com/CCC917111/strategic-adaptation-llm-pricing-agents/blob/main/docs/arm2-cycle.md">Demand-cycle experiment <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="text-link" href="projects.html#pricing">Software details <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="research-entry" id="forest">
+        <aside class="entry-meta">
+          <p class="entry-period">Multimodal learning</p>
+          <p class="entry-role">Project lead; four-person deep-learning course project</p>
+        </aside>
+        <div class="entry-content">
+          <h2>Forest Type Mapping with Convolutions and Selective State Spaces</h2>
+          <p class="study-question">What do state-space blocks add to a model that combines seasonal imagery, terrain and climate?</p>
+          <p>I led a four-person project on nine-class forest-type segmentation from four seasonal Sentinel-2 composites, terrain and climate. The TensorFlow implementation combines convolutional encoders, custom Mamba-inspired selective state-space blocks and sample-dependent modality fusion. Training, checkpoint restoration, evaluation and tile prediction share the same pipeline.</p>
+          <h3 class="study-subtitle">A controlled small-cohort comparison</h3>
+          <p>Six runs compare the state-space model with a CNN-only control across three paired seeds, using the same fixed ForTy cohort and ten-epoch budget. On 146 shared test tiles, mean macro F1 was 39.30% with the state-space blocks and 38.19% for CNN-only. Two seeds improved and one regressed. The state-space model also has 53.6% more parameters, so the small average difference does not isolate recurrence from model capacity. Full-benchmark evaluation remains pending.</p>
+          <h3 class="study-subtitle">Measure the implementation as well as the model</h3>
+          <p>A separate Tesla T4 study measures batch scaling: batch eight delivered 4.80 times the inference compute throughput of batch one. It uses initialized weights and a repeated synthetic tile, excluding file IO and preprocessing. The repository keeps these runtime measurements separate from the real-data pilot.</p>
+          <div class="link-row">
+            <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation">View code <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation/blob/main/results/architecture_pilot_t4_20261029/README.md">Three-seed pilot <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="text-link" href="https://github.com/CCC917111/geospatial-mamba-deforestation/blob/main/results/batch_study_t4_20261028/README.md">T4 batch study <svg class="icon-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13 13 3M3 3h10v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
